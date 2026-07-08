@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rozek — La IA del futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Styrene+A:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fallback fonts similar to Claude -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Rozek</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Capacidades</a></li>
+        <li><a href="#how">Cómo funciona</a></li>
+        <li><a href="#pricing">Planes</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#" class="btn btn--ghost">Iniciar sesión</a>
+        <a href="#" class="btn btn--primary">Probar gratis</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#features" class="mobile-link">Capacidades</a></li>
+      <li><a href="#how" class="mobile-link">Cómo funciona</a></li>
+      <li><a href="#pricing" class="mobile-link">Planes</a></li>
+      <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      <li><a href="#" class="btn btn--ghost" style="display:inline-block;margin-top:8px;">Iniciar sesión</a></li>
+      <li><a href="#" class="btn btn--primary" style="display:inline-block;margin-top:8px;">Probar gratis</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-glow"></div>
+    <div class="hero__bg-glow hero__bg-glow--2"></div>
+    <div class="container">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Rozek 2.0 ya disponible
+      </div>
+      <h1 class="hero__title">
+        La inteligencia<br />
+        <em>que te entiende</em>
+      </h1>
+      <p class="hero__subtitle">
+        Rozek es una IA de nueva generación diseñada para pensar contigo, no por ti.
+        Más precisa, más honesta y más poderosa que cualquier asistente que hayas probado.
+      </p>
+      <div class="hero__actions">
+        <a href="#" class="btn btn--primary btn--lg">Comenzar ahora — es gratis</a>
+        <a href="#how" class="btn btn--ghost btn--lg">Ver cómo funciona</a>
+      </div>
+      <div class="hero__social-proof">
+        <div class="avatars">
+          <img src="https://i.pravatar.cc/32?img=1" alt="user" />
+          <img src="https://i.pravatar.cc/32?img=2" alt="user" />
+          <img src="https://i.pravatar.cc/32?img=3" alt="user" />
+          <img src="https://i.pravatar.cc/32?img=4" alt="user" />
+          <img src="https://i.pravatar.cc/32?img=5" alt="user" />
+        </div>
+        <p>Más de <strong>50,000 personas</strong> ya usan Rozek</p>
+      </div>
+    </div>
+
+    <!-- CHAT DEMO -->
+    <div class="container">
+      <div class="chat-demo">
+        <div class="chat-demo__header">
+          <span class="chat-demo__dot"></span>
+          <span class="chat-demo__dot chat-demo__dot--2"></span>
+          <span class="chat-demo__dot chat-demo__dot--3"></span>
+          <span class="chat-demo__title">Rozek — Conversación</span>
+        </div>
+        <div class="chat-demo__body">
+          <div class="chat-msg chat-msg--user">
+            <div class="chat-msg__bubble">¿Puedes ayudarme a escribir un plan de negocios para una startup de tecnología?</div>
+          </div>
+          <div class="chat-msg chat-msg--ai">
+            <div class="chat-msg__avatar">✦</div>
+            <div class="chat-msg__bubble">
+              Por supuesto. Para crear un plan de negocios sólido, necesito entender mejor tu idea. Comencemos con lo esencial:
+              <br /><br />
+              <strong>1. Propuesta de valor</strong> — ¿Qué problema específico resuelve tu startup?<br />
+              <strong>2. Mercado objetivo</strong> — ¿A quién va dirigido?<br />
+              <strong>3. Modelo de ingresos</strong> — ¿Cómo generará dinero?
+              <br /><br />
+              Cuéntame sobre tu idea y construiremos el plan paso a paso.
+            </div>
+          </div>
+          <div class="chat-msg chat-msg--user">
+            <div class="chat-msg__bubble">Es una app de salud mental con IA para jóvenes de 16 a 25 años.</div>
+          </div>
+          <div class="chat-msg chat-msg--ai typing">
+            <div class="chat-msg__avatar">✦</div>
+            <div class="chat-msg__bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-demo__input">
+          <input type="text" placeholder="Escríbele a Rozek..." readonly />
+          <button class="send-btn" aria-label="Enviar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS / TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <p class="trust-bar__label">Usado por equipos en</p>
+      <div class="trust-bar__logos">
+        <span>Startups</span>
+        <span>Universidades</span>
+        <span>Agencias creativas</span>
+        <span>Desarrolladores</span>
+        <span>Empresas Fortune 500</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capacidades</span>
+        <h2 class="section-title">Todo lo que necesitas,<br />en un solo lugar</h2>
+        <p class="section-subtitle">Rozek combina razonamiento avanzado, creatividad y precisión para adaptarse a cualquier tarea.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card feature-card--wide">
+          <div class="feature-card__icon">🧠</div>
+          <h3>Razonamiento profundo</h3>
+          <p>Rozek no solo responde, analiza, razona y explica su proceso de pensamiento paso a paso con total transparencia.</p>
+          <div class="feature-card__tag">Nuevo en v2.0</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">✍️</div>
+          <h3>Escritura creativa</h3>
+          <p>Desde ensayos hasta guiones, Rozek adapta su voz y estilo a lo que necesitas.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">💻</div>
+          <h3>Código avanzado</h3>
+          <p>Genera, depura y explica código en más de 30 lenguajes de programación.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3>Análisis de datos</h3>
+          <p>Interpreta tablas, gráficas y documentos complejos en segundos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🌐</div>
+          <h3>Multilingüe</h3>
+          <p>Habla y entiende más de 50 idiomas con fluidez nativa.</p>
+        </div>
+
+        <div class="feature-card feature-card--wide">
+          <div class="feature-card__icon">🔒</div>
+          <h3>Privacidad primero</h3>
+          <p>Tus conversaciones son tuyas. Rozek no almacena datos personales ni entrena modelos con tu información sin tu consentimiento explícito.</p>
+          <div class="feature-card__tag">SOC 2 Certificado</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cómo funciona</span>
+        <h2 class="section-title">Simple de usar,<br />poderoso por dentro</h2>
+      </div>
+      <div class="how__steps">
+        <div class="how__step">
+          <div class="how__step-number">01</div>
+          <div class="how__step-content">
+            <h3>Crea tu cuenta</h3>
+            <p>Regístrate en segundos con tu correo o cuenta de Google. Sin tarjeta de crédito requerida.</p>
+          </div>
+        </div>
+        <div class="how__connector"></div>
+        <div class="how__step">
+          <div class="how__step-number">02</div>
+          <div class="how__step-content">
+            <h3>Escríbele a Rozek</h3>
+            <p>Hazle cualquier pregunta, pídele que escriba, analice o resuelva cualquier problema que tengas.</p>
+          </div>
+        </div>
+        <div class="how__connector"></div>
+        <div class="how__step">
+          <div class="how__step-number">03</div>
+          <div class="how__step-content">
+            <h3>Obtén resultados reales</h3>
+            <p>Rozek te entrega respuestas precisas, detalladas y accionables en tiempo real.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Planes</span>
+        <h2 class="section-title">Empieza gratis,<br />escala cuando quieras</h2>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card__name">Gratis</div>
+          <div class="pricing-card__price">$0 <span>/mes</span></div>
+          <p class="pricing-card__desc">Para explorar Rozek sin compromiso.</p>
+          <ul class="pricing-card__features">
+            <li>✓ 50 mensajes por día</li>
+            <li>✓ Acceso al modelo base</li>
+            <li>✓ Historial de 7 días</li>
+            <li>✓ Soporte por comunidad</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--full">Comenzar gratis</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Más popular</div>
+          <div class="pricing-card__name">Pro</div>
+          <div class="pricing-card__price">$12 <span>/mes</span></div>
+          <p class="pricing-card__desc">Para usuarios que necesitan más potencia.</p>
+          <ul class="pricing-card__features">
+            <li>✓ Mensajes ilimitados</li>
+            <li>✓ Acceso a Rozek 2.0</li>
+            <li>✓ Historial ilimitado</li>
+            <li>✓ Análisis de archivos</li>
+            <li>✓ Soporte prioritario</li>
+          </ul>
+          <a href="#" class="btn btn--primary btn--full">Obtener Pro</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__name">Empresa</div>
+          <div class="pricing-card__price">Custom</div>
+          <p class="pricing-card__desc">Para equipos y organizaciones grandes.</p>
+          <ul class="pricing-card__features">
+            <li>✓ Todo lo de Pro</li>
+            <li>✓ API dedicada</li>
+            <li>✓ SSO y control de acceso</li>
+            <li>✓ SLA garantizado</li>
+            <li>✓ Onboarding personalizado</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--full">Contactar ventas</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Lo que dicen<br />nuestros usuarios</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <p>"Rozek cambió completamente cómo trabajo. Es como tener un asistente brillante disponible las 24 horas."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/40?img=10" alt="María G." />
+            <div>
+              <strong>María González</strong>
+              <span>Diseñadora UX, Freelance</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"La precisión de Rozek al analizar código es impresionante. Encontró un bug en 3 segundos que yo llevaba horas buscando."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/40?img=11" alt="Carlos M." />
+            <div>
+              <strong>Carlos Mendoza</strong>
+              <span>Desarrollador Senior, TechCorp</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Uso Rozek para investigación académica. La calidad de sus resúmenes y análisis es superior a cualquier otra herramienta."</p>
+          <div class="testimonial-card__author">
+            <img src="https://i.pravatar.cc/40?img=12" alt="Ana R." />
+            <div>
+              <strong>Ana Rodríguez</strong>
+              <span>Investigadora, Universidad Nacional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Preguntas frecuentes</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            ¿Qué hace diferente a Rozek de ChatGPT o Claude?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Rozek está diseñado con un enfoque en transparencia y precisión. A diferencia de otros modelos, Rozek muestra su proceso de razonamiento, admite cuando no sabe algo y prioriza la privacidad del usuario por encima de todo.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            ¿Es realmente gratis el plan básico?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sí, el plan gratuito incluye 50 mensajes diarios sin necesidad de tarjeta de crédito. Puedes usarlo indefinidamente sin costo alguno.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            ¿Mis conversaciones son privadas?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Absolutamente. Rozek no comparte ni vende tus datos. Puedes eliminar tu historial en cualquier momento desde la configuración de tu cuenta.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            ¿En qué idiomas está disponible Rozek?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Rozek está disponible en más de 50 idiomas, incluyendo español, inglés, portugués, francés, alemán, japonés, chino y muchos más.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            ¿Puedo usar Rozek en mi empresa?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sí, ofrecemos planes empresariales con API dedicada, control de acceso y soporte personalizado. Contáctanos para una demostración.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__card">
+        <div class="cta-final__glow"></div>
+        <h2>Comienza a usar Rozek hoy</h2>
+        <p>Únete a más de 50,000 personas que ya trabajan de forma más inteligente con Rozek.</p>
+        <a href="#" class="btn btn--primary btn--lg">Crear cuenta gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-icon">✦</span>
+            <span class="logo-text">Rozek</span>
+          </a>
+          <p>La IA que piensa contigo.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Producto</h4>
+            <a href="#">Características</a>
+            <a href="#">Precios</a>
+            <a href="#">API</a>
+            <a href="#">Changelog</a>
+          </div>
+          <div class="footer__col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Carreras</a>
+            <a href="#">Prensa</a>
+          </div>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Rozek AI. Todos los derechos reservados.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">⌥</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
